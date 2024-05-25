@@ -33,10 +33,10 @@ jobs:
     - run: npm run build --if-present
     - run: npm test
 
-    - name: Test Report
-      uses: dorny/test-reporter@v1
-      with:
-        name: Test Results
-        path: ${{ github.workspace }}/reports/test-results.json
-        reporter: 'mocha-json'
-        run: node dist/index.js ctrf-report.json
+    # - name: Test Report
+    #   uses: dorny/test-reporter@v1
+    #   with:
+    #     name: Test Results
+    #     path: ${{ github.workspace }}/reports/test-results.json
+    #     reporter: 'mocha-json'
+    #     run: node dist/index.js ctrf-report.json
