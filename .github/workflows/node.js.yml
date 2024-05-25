@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x, 16.x, 18.x]
+        node-version: [12.x, 14.x, 16.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -32,3 +32,10 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
+
+    - name: Test Report
+      uses: dorny/test-reporter@v1
+      with:
+        name: Test Results
+        path: ${{ github.workspace }}/reports/test-results.json
+        reporter: 'mocha-json'
