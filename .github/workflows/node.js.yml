@@ -38,4 +38,4 @@ jobs:
       with:
         name: Test Results
         path: ${{ github.workspace }}/reports/test-results.json
-        reporter: 'mocha-json'
+        reporter: 'mochawesome-json'
