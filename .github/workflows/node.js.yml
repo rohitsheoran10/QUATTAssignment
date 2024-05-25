@@ -38,5 +38,5 @@ jobs:
       with:
         name: Test Results
         path: ${{ github.workspace }}/reports/test-results.json
-        #reporter: 'mocha-json'
+        reporter: 'mocha-json'
         run: node dist/index.js ctrf-report.json
