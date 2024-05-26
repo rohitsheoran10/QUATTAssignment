@@ -9,7 +9,7 @@ const userauthdata = require('../testdata/userauthdata.json');
 describe('Get API test', () => {
     const baseurl = 'https://gorest.co.in/';
     var userId = 6927844
-    //var token = userauthdata.token ;     
+    var token = userauthdata.token ;     
 
     it('should fetch the user details', (done) => {
         var name = 'Rev. Dhanapati Desai'
