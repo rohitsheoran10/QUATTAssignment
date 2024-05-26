@@ -17,7 +17,7 @@ describe('Get API test', () => {
         request(baseurl)
             .get('public/v2/users/'+ userId)
             .query(userId)
-            //.set('Authorization', 'Bearer '+ token)       
+            .set('Authorization', 'Bearer '+ token)       
             .end(function(err, res) {
                 console.log(res.body)
                 expect(res.statusCode).to.be.equal(200);
